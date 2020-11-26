@@ -8,17 +8,17 @@ import '../assets/styles/App.css';
 import data from '../data';
 
 function App() {
-  const  [ birthdayList, setBirthdayList] = useState(data)
+  const  [ topTenList, setTopTenList] = useState(data)
 
   function clearAll() {
-    setBirthdayList([])
+    setTopTenList([])
   }
 
   return (
     <div className='App'>
       <Main>
         <Title title={'ATP TOP 10'} />
-        <List birthdayList={birthdayList} />
+        <List birthdayList={topTenList} />
         <Button buttonText={'Clear All'} clearAll={clearAll} />
       </Main>
     </div>
